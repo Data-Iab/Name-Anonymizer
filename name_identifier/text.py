@@ -12,6 +12,9 @@ class Text:
     def set_anonymized_content(self, a):
         self.anonymized_content = a
 
+    def get_anonymized_content(self):
+        return self.anonymized_content
+
     def get_original_content(self):
         return self.original_content
 
