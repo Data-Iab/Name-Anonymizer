@@ -1,4 +1,4 @@
-from pathlib import Path
+import os
 
 
 class Saver:
@@ -7,7 +7,8 @@ class Saver:
 
     def save(self, text_list):
         base_path = self.output_dir + '\\Anonymized'
-        Path(base_path).mkdir(parents=True, exist_ok=True)
+        if not os.path.exists(base_path):
+            os.makedirs(base_path)
 
         for text in text_list:
             name = text.get_file_name()
