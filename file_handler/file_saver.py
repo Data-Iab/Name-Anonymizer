@@ -6,6 +6,7 @@ class Saver:
         self.output_dir = output_dir
 
     def save(self, text_list):
+        """Saves list of Text objects' anonymized content in output_dir in .txt format"""
         base_path = self.output_dir + '\\Anonymized'
         if not os.path.exists(base_path):
             os.makedirs(base_path)
