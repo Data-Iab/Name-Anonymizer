@@ -33688,7 +33688,6 @@ bordât
 bordâtes
 borde
 bordé
-bordeaux
 bordée
 bordées
 bordel
@@ -40936,7 +40935,6 @@ calage
 calages
 calai
 calaient
-calais
 calaison
 calaisons
 calait
@@ -42703,7 +42701,6 @@ canneriez
 cannerions
 cannerons
 canneront
-cannes
 cannés
 cannetille
 cannetilles
@@ -61505,7 +61502,6 @@ confortons
 conforts
 confraternel
 confraternelle
-confraternellement
 confraternelles
 confraternels
 confraternité
@@ -190814,6 +190810,7 @@ jordanien
 jordanienne
 jordaniennes
 jordaniens
+joseph
 josephs
 jota
 jotas
@@ -196308,7 +196305,6 @@ limogeriez
 limogerions
 limogerons
 limogeront
-limoges
 limogés
 limogez
 limogiez
@@ -228841,7 +228837,6 @@ paripenné
 paripennée
 paripennées
 paripennés
-paris
 parisette
 parisettes
 parisianisme
@@ -275235,7 +275230,6 @@ renions
 rénitence
 rénitences
 renne
-rennes
 renom
 renomma
 renommai
@@ -289819,7 +289813,6 @@ saint-nectaire
 Saint-Office
 saint-paulin
 saint-père
-saint-pierre
 saints
 Saint-Siège
 saint-simonien
@@ -319980,7 +319973,6 @@ tournures
 touron
 tourons
 tour-opérateur
-tours
 tours-opérateurs
 tourte
 tourteau
