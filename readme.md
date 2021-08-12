@@ -5,7 +5,7 @@
 Name Anonymizer is a simple tool that detects and hides foreign words (could be names, locations...) in text.<br/>
 ***Best use: French text with non-French names.***
 
-![plot](image1.jpg)
+<div style="text-align:center"><img src="image1.jpg"  width="700" height="300"/></div>
 
 ## How to use it ?
 
@@ -29,4 +29,4 @@ Explore Names Anonymizer with a GUI by running the command:
 <li>Download files</li>
 </ol>
 
-![plot](image2.jpg)
+<div><img src="image2.jpg"  width="600" height="500"/></div>
