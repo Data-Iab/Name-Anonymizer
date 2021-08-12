@@ -6,7 +6,7 @@ from utils.utils import download_zip_file
 
 
 def main():
-    st.title('Medical reports anonymizer')
+    st.title('Names Anonymizer')
     files_name = st.file_uploader("", accept_multiple_files=True)
     name_identifier = NameIdentifier()
     loader = STLoader(uploaded=files_name)
