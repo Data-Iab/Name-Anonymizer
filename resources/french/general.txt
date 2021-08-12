@@ -71936,6 +71936,7 @@ croissante
 croissantes
 croissants
 croisse
+croissement
 croissent
 croisses
 croissez
@@ -175625,7 +175626,7 @@ horde
 hordéine
 hordéines
 hordes
-horion
+hohouria
 horions
 horizon
 horizons
