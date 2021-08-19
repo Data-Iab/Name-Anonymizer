@@ -1,6 +1,7 @@
 # Name-Anonymizer for data protection (beta)
 
-##What is Name-Anonymizer ?
+
+## What is Name-Anonymizer?
 
 Name Anonymizer is a simple tool that detects and hides foreign words (could be names, locations...) in text.<br/>
 ***Best use: French text with non-French names.***
