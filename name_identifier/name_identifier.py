@@ -5,7 +5,6 @@ from utils.utils import preprocess_dic
 import glob
 import numpy as np
 import os.path
-from nltk.stem.snowball import FrenchStemmer
 
 
 class NameIdentifier:
@@ -21,7 +20,6 @@ class NameIdentifier:
         self.preprocess_dictionary: bool = preprocess_dictionary
         self.dict_path = glob.glob(os.path.abspath('resources') + f'\\{self.language}\\*')
         self.vocab: dict = {}
-        self.stemmer = FrenchStemmer()
 
     def load_dict(self):
         """Loads dictionaries' words in /resources to self.vocab"""
@@ -60,9 +58,7 @@ class NameIdentifier:
                     continue
 
                 if not self.word_in_vocab(word):
-                    stemmed_word = self.stemmer.stem(word)
-                    if not self.word_in_vocab(stemmed_word):
-                        start = content.find(word)
-                        entity = Entity(word, start, len(word))
-                        text.add_entity(entity)
+                    start = content.find(word)
+                    entity = Entity(word, start, len(word))
+                    text.add_entity(entity)
         return text_list
