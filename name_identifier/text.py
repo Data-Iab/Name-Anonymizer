@@ -4,10 +4,10 @@ from name_identifier.entity import Entity
 
 
 class Text:
-    def __init__(self, path, content):
+    def __init__(self, content, path=None):
         """
 
-        :param path: text file path
+        :param path: text file path or name
         :param content: file content
         """
         self.path: str = path
