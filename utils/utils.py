@@ -1,7 +1,5 @@
 import re
 import unidecode
-import base64
-import streamlit as st
 
 
 def remove_accents(txt):
@@ -39,11 +37,3 @@ def insensitive_replace(text: str, sub_text: str, replace: str):
     """
     txt = re.compile(re.escape(sub_text), re.IGNORECASE)
     return txt.sub(replace, text)
-
-
-def download_zip_file(txt_files):
-    for t in txt_files:
-        content = t.get_anonymized_content().encode()
-        b64 = base64.b64encode(content).decode()
-        href = f'<a href="data:file/content;base64,{b64}" download="{t.get_file_name()}">Download {t.get_file_name()}</a>'
-        st.markdown(href, unsafe_allow_html=True)
