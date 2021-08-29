@@ -5,6 +5,7 @@ from utils.utils import preprocess_dic
 import glob
 import numpy as np
 import os.path
+import warnings
 
 
 class NameIdentifier:
@@ -20,6 +21,12 @@ class NameIdentifier:
         self.preprocess_dictionary: bool = preprocess_dictionary
         self.dict_path = glob.glob(os.path.abspath('resources') + f'\\{self.language}\\*')
         self.vocab: dict = {}
+        self.supported_languages = ['french']
+        if language.lower() not in self.supported_languages:
+            warnings.warn(f'Language not supported, here is a list of supported languages: \n {self.supported_languages}')
+
+    def get_supported_languages(self):
+        return self.supported_languages
 
     def load_dict(self):
         """Loads dictionaries' words in /resources to self.vocab"""
@@ -35,8 +42,8 @@ class NameIdentifier:
         for i, word in enumerate(words_list):
             self.vocab[word] = i
 
-    def word_in_vocab(self, word):
-        """Checks if the word is in self.vocal or not -> bool"""
+    def word_in_vocab(self, word) -> bool:
+        """Checks if the word is in self.vocab or not -> bool"""
         try:
             _ = self.vocab[word]
             return True

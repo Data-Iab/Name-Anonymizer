@@ -2,3 +2,5 @@ Unidecode==1.2.0
 numpy>=1.19.5
 nltk>=3.6.1
 streamlit>=0.86.0
+flask>=1.1.4
+werkzeug>=1.0.1
