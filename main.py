@@ -1,5 +1,3 @@
-import numpy as np
-
 from name_identifier.name_identifier import NameIdentifier
 from file_handler.file_loader import Loader
 from file_handler.file_saver import Saver
