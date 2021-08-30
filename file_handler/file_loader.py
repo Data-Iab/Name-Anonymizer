@@ -1,6 +1,7 @@
 from name_identifier.text import Text
 import glob
 from typing import List
+import os
 
 
 class Loader:
@@ -18,7 +19,7 @@ class Loader:
         self.paths = paths
         if paths is None:
             try:
-                self.paths: List[str] = sorted(glob.glob(input_dir + '/*'))
+                self.paths: List[str] = sorted(glob.glob(os.path.join(input_dir, '*')))
             except:
                 print()
 
