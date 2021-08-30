@@ -33,7 +33,7 @@ class NameIdentifier:
         """Loads dictionaries' words in /resources to self.vocab"""
         words_list = []
         for path in self.dict_path:
-            with open(path, 'w', encoding='utf-8') as f:
+            with open(path, encoding='utf-8') as f:
                 doc = f.readlines()
                 doc = list(map(lambda x: x[:-1], doc))
                 if self.preprocess_dictionary:
