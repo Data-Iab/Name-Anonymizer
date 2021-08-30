@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Names Anonymizer</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+<body>
+
+<div class="area">
+    <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<div class="uploader">
+    <form method="POST" enctype=multipart/form-data>
+        <p>Names Anonymizer</p>
+        <label>
+            <select name="language" class="languages-drp">Language
+                {%for language in supported_languages%}
+                <option value={{language}} class="upload-button">{{language}}</option>
+                {%endfor%}
+            </select>
+        </label>
+        <br>
+        <label class="upload-button">
+        <input type="file" name="file[]" multiple >
+            Upload files
+        </label>
+        <br>
+        <button class="download-button">Download</button>
+    </form>
+
+</div>
+    <div class="signature">by AZZIM Taha</div>
+
+</body>
