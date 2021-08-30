@@ -19,11 +19,12 @@ class NameIdentifier:
         self.min_length: int = min_length
         self.language: str = language
         self.preprocess_dictionary: bool = preprocess_dictionary
-        self.dict_path = glob.glob(os.path.abspath('resources') + f'\\{self.language}\\*')
+        relative_path = os.path.join(self.language, '*')
+        self.dict_path = glob.glob(os.path.join(os.path.abspath('resources'), relative_path))
         self.vocab: dict = {}
         self.supported_languages = ['french']
         if language.lower() not in self.supported_languages:
-            warnings.warn(f'Language not supported, here is a list of supported languages: \n {self.supported_languages}')
+            warnings.warn(f'Unsupported language, here is a list of supported languages: \n {self.supported_languages}')
 
     def get_supported_languages(self):
         return self.supported_languages
@@ -32,7 +33,7 @@ class NameIdentifier:
         """Loads dictionaries' words in /resources to self.vocab"""
         words_list = []
         for path in self.dict_path:
-            with open(path, encoding='utf-8') as f:
+            with open(path, 'w', encoding='utf-8') as f:
                 doc = f.readlines()
                 doc = list(map(lambda x: x[:-1], doc))
                 if self.preprocess_dictionary:
