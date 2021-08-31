@@ -3,6 +3,13 @@
     <meta charset="UTF-8">
     <title>Names Anonymizer</title>
     <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -20,9 +27,13 @@
         <li></li>
     </ul>
 </div>
+<div class="head">
+    This is an open source project, you can access it from
+    <a href="https://github.com/Data-Iab/Name-Anonymizer">here</a>, to anonymize your sensitive text entities
+    (names & locations). You can upload multiple .txt files and download their anonymized version.
+</div>
 <div class="uploader">
     <form method="POST" enctype=multipart/form-data>
-        <p>Names Anonymizer</p>
         <label>
             <select name="language" class="languages-drp">Language
                 {%for language in supported_languages%}
@@ -32,14 +43,16 @@
         </label>
         <br>
         <label class="upload-button">
-        <input type="file" name="file[]" multiple >
+        <input type="file" name="file[]" multiple>
             Upload files
         </label>
         <br>
         <button class="download-button">Download</button>
     </form>
-
 </div>
-    <div class="signature">by AZZIM Taha</div>
-
+    <div class="signature">
+            <a href="https://www.linkedin.com/in/taha-azzim/" class="fa fa-linkedin-square"></a>
+<br>
+        <a style="font-size: 13px">by AZZIM Taha</a>
+    </div>
 </body>

@@ -27,7 +27,7 @@ body {
 
 p {
     text-align: center;
-    color: #000000;
+    color: #ffffff;
     letter-spacing: 0.05em;
     font-size: 1em;
     margin: 0 0 2em;
@@ -42,8 +42,8 @@ p {
 
 
 .area {
-    background: #884f4f;
-    background: -webkit-linear-gradient(to left, #f1f1f3, #fafafd);
+    background: #eeeeee;
+    background: -webkit-linear-gradient(to left, #000000, #000000);
     width: 100%;
     height: 100vh;
 
@@ -65,7 +65,7 @@ p {
     list-style: none;
     width: 20px;
     height: 20px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(0, 16, 79, 0.8);
     animation: animate 25s linear infinite;
     bottom: -150px;
 
@@ -165,7 +165,7 @@ p {
 }
 
 .uploader {
-    background-color: rgba(255, 255, 255, .8);
+    background-color: rgba(0, 16, 79, 0.8);
     border-radius: .25em;
     box-shadow: 0 0 .25em rgba(0, 0, 0, .25);
     box-sizing: border-box;
@@ -173,7 +173,7 @@ p {
     padding: 10vmin;
     position: fixed;
     text-align: center;
-    top: 50%;
+    top: 55%;
     transform: translate(-50%, -50%);
 }
 
@@ -182,9 +182,21 @@ p {
     padding: 10vmin;
     position: fixed;
     text-align: center;
-    color: white;
-    top: 97%;
-    font-family: 'Gabriola', cursive ;
+    color: #000000;
+    top: 95%;
+    font-size: 25px;
+    font-family: 'Handlee', cursive;
+    transform: translate(-50%, -50%);
+}
+
+
+.head {
+    left: 50%;
+    position: fixed;
+    text-align: center;
+    color: rgba(0, 10, 52, 0.8);
+    top: 15%;
+    font-family: 'Titillium Web', sans-serif;
     transform: translate(-50%, -50%);
 }
 
@@ -260,4 +272,22 @@ input[type="file"] {
 .languages-drp:hover {
     color: #000000;
     background-color: #FFFFFF;
+}
+
+.fa {
+  cursor: pointer;
+  padding: 5px;
+  font-size: 50px;
+  width: 10px;
+  text-align: center;
+  text-decoration: none;
+  transition: transform .4s;
+}
+
+.fa:hover {
+  transform: scale(1.2);
+}
+
+.fa-linkedin-square {
+  color: #0077b5;
 }
