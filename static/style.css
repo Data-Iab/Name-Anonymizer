@@ -200,6 +200,16 @@ p {
     transform: translate(-50%, -50%);
 }
 
+.message {
+    position: fixed;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 12px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 input[type="file"] {
     display: none;
 }

@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, send_from_directory
+from flask import Flask, render_template, request, send_from_directory, flash
 from name_identifier.name_identifier import NameIdentifier
 from anonymizers.anonymizer import Anonymizer
 from name_identifier.text import Text
@@ -16,11 +16,14 @@ app = Flask(__name__)
 @app.route('/', methods=['POST', 'GET'])
 def main_page():
     supported_languages = NameIdentifier().get_supported_languages()
+    no_files_message = ''
     anonymized = ''
     if request.method == 'GET':
         return render_template('main.html', supported_languages=supported_languages)
     else:
         files = request.files.getlist("file[]")
+        if files[0].filename == '':
+            no_files_message = 'please upload files'
         if files and allowed_files(files):
             file_list = []
             # upload
@@ -46,7 +49,10 @@ def main_page():
             zip_file.close()
             return send_from_directory(temporary_dir, filename=zip_name)
 
-        return render_template('main.html', supported_languages=supported_languages, anonymized=anonymized)
+        return render_template('main.html',
+                               supported_languages=supported_languages,
+                               anonymized=anonymized,
+                               no_files_message=no_files_message)
 
 
 def anonymize(file_text: List[Text], language: str) -> List[Text]:
