@@ -35,17 +35,17 @@
         <label>
             <select name="language" class="languages-drp">Language
                 {%for language in supported_languages%}
-                <option value={{language}} class="upload-button">{{language}}</option>
+                <option value={{language}} class="uploader-buttons">{{language}}</option>
                 {%endfor%}
             </select>
         </label>
         <br>
-        <label class="upload-button">
+        <label class="uploader-buttons">
         <input type="file" name="file[]" multiple>
             Upload files
         </label>
         <br>
-        <button class="download-button">Download</button>
+        <button class="uploader-buttons">Download</button>
         <br>
         <br>
         <div class="message">{{no_files_message}}</div>
