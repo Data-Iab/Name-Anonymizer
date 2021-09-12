@@ -196,9 +196,23 @@ p {
     text-align: center;
     color: rgba(0, 10, 52, 0.8);
     top: 15%;
+    font-size: 17px;
     font-family: 'Titillium Web', sans-serif;
     transform: translate(-50%, -50%);
 }
+
+
+.note {
+    left: 50%;
+    position: fixed;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.8);
+    top: 80%;
+    font-size: 10px;
+    font-family: 'Titillium Web', sans-serif;
+    transform: translate(-50%, -50%);
+}
+
 
 .message {
     position: fixed;
