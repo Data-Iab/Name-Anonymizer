@@ -10780,9 +10780,7 @@ altiste
 altistes
 altitude
 altitudes
-alto
 altocumulus
-altos
 altruisme
 altruismes
 altruiste
@@ -202660,7 +202658,6 @@ marbrions
 marbrons
 marbrure
 marbrures
-marc
 marcassin
 marcassins
 marcassite

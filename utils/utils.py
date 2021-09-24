@@ -2,18 +2,18 @@ import re
 import unidecode
 
 
-def remove_accents(txt):
+def remove_accents(txt: str) -> str:
     """Accents removal"""
     txt = unidecode.unidecode(txt)
     return txt.lower()
 
 
-def preprocess_dic(txt):
+def preprocess_dic(txt: str) -> str:
     """Preprocess dictionary words before uploading them (make words accent insensitive)"""
     return remove_accents(txt)
 
 
-def preprocess_text(txt):
+def preprocess_text(txt: str) -> str:
     """Preprocess target text, eliminate unwanted characters"""
     custom_replace = {
         '\n': ' ',
@@ -27,7 +27,7 @@ def preprocess_text(txt):
     return ' '.join(txt.split())
 
 
-def insensitive_replace(text: str, sub_text: str, replace: str):
+def insensitive_replace(text: str, sub_text: str, replace: str) -> str:
     """Replace each occurrence of sub_text in the text regardless of upper/lower cases
 
     :param text: target text
