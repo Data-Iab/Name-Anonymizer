@@ -26,7 +26,7 @@ Clone the repository and run the following command:
 
 Currently, the only supported language is French, check supported languages using:
 
-<code> NameIdentifier.get_supported_languages()</code>
+<code> NameIdentifier().get_supported_languages()</code>
 
 ## Add a custom VOCABULARY
 
